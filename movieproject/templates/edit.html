@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST", enctype="multipart/form-data">
+  {% csrf_token %}
+  <a class="btn btn-info" href="{% url 'movieapp:index' %}">Back</a>
+  {{form.as_p}}
+  <input type="submit">
+</form>
+{% endblock %}
